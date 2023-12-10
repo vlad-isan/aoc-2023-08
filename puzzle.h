@@ -11,6 +11,7 @@
 #include <fstream>
 #include <iostream>
 #include <map>
+#include <numeric>
 #include <ranges>
 #include <regex>
 #include <string>
@@ -38,8 +39,14 @@ int puzzle_2(const std::string &base_file_path);
 
 int do_puzzle_1(std::ifstream &file);
 
-int do_puzzle_2(std::ifstream &file);
+int64_t do_puzzle_2(std::ifstream &file);
 
 int get_steps_to_target(const NodeMap &node_map, std::vector<Instruction> &instructions, const std::string &start, const std::string &target);
+
+int64_t get_steps_to_target_ending(const NodeMap &node_map, std::vector<Instruction> &instructions, const std::string &start, const std::string &target_ending);
+
+int64_t gcd(int64_t a, int64_t b);
+
+int64_t lcm(int64_t a, int64_t b);
 
 #endif //PUZZLE_H
